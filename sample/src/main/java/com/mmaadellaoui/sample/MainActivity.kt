@@ -11,6 +11,8 @@ import android.support.design.widget.NavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
+import com.mmaadellaoui.hguide.HGuide
+import com.mmaadellaoui.hguide.from
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -34,6 +36,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         navView.setNavigationItemSelectedListener(this)
+
+        HGuide.from(window).apply(R.id.fab).create().show();
     }
 
     override fun onBackPressed() {
